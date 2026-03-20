@@ -9,7 +9,7 @@ function ProductList({ addToCart }) {
   const [search, setSearch] = useState("");
   const [category, setCategory] = useState("");
 
-  // ✅ NEW STATES
+  
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
 
@@ -31,7 +31,7 @@ function ProductList({ addToCart }) {
     (category ? p.category === category : true)
   );
 
-  // ✅ LOADING UI
+  
   if (loading) {
     return (
         <div className="flex justify-center items-center h-screen">
@@ -40,7 +40,7 @@ function ProductList({ addToCart }) {
     );
   }
 
-  // ✅ ERROR UI
+  
   if (error) {
     return (
       <div className="flex justify-center items-center h-screen text-red-500 text-xl">
@@ -52,16 +52,14 @@ function ProductList({ addToCart }) {
   return (
     <div className="p-4 max-w-7xl mx-auto">
 
-      {/* Search + Filter */}
       <div className="bg-white p-4 rounded-2xl shadow-md mb-6">
        <div className="flex flex-col md:flex-row gap-4 items-center">
   
-  {/* Search */}
+
   <div className="w-full md:w-2/3">
     <SearchBar setSearch={setSearch} />
   </div>
 
-  {/* Filter */}
   <div className="w-full md:w-1/3">
     <Filter setCategory={setCategory} />
   </div>
@@ -69,7 +67,7 @@ function ProductList({ addToCart }) {
 </div>
       </div>
 
-      {/* Products */}
+     
       {filtered.length === 0 ? (
         <p className="text-center text-gray-500">No products found </p>
       ) : (
@@ -78,7 +76,7 @@ function ProductList({ addToCart }) {
             <ProductCard
               key={p.id}
               product={p}
-              addToCart={addToCart} // ✅ PASS THIS
+              addToCart={addToCart}
             />
           ))}
         </div>

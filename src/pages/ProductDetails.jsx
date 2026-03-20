@@ -31,7 +31,7 @@ function ProductDetails({ addToCart }) {
 
       <div className="grid md:grid-cols-2 gap-10 bg-white p-6 rounded-2xl shadow-lg text-black">
 
-        {/* Image */}
+    
         <div className="flex justify-center items-center bg-gray-100 p-6 rounded-xl">
           <img
             src={product.image}
@@ -40,7 +40,6 @@ function ProductDetails({ addToCart }) {
           />
         </div>
 
-        {/* Details */}
         <div className="flex flex-col justify-center">
           <h1 className="text-2xl md:text-3xl font-bold mb-3">
             {product.title}
@@ -58,7 +57,7 @@ function ProductDetails({ addToCart }) {
             ${product.price}
           </h2>
 
-          {/* Add to Cart Button */}
+          
           <button
             onClick={() => addToCart(product)}
             className="bg-blue-600 text-white px-6 py-3 rounded-xl hover:bg-blue-700 transition"

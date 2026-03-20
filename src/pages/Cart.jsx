@@ -32,9 +32,9 @@ function Cart({ cart, setCart }) {
   return (
     <div className="max-w-6xl mx-auto p-6">
 
-      {/* Back Button */}
+      
       <button
-        onClick={() => navigate(-1)} // go back
+        onClick={() => navigate(-1)} 
         className="mb-6 bg-gray-200 text-black px-4 py-2 rounded hover:bg-gray-300 transition"
       >
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">

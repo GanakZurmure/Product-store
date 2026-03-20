@@ -13,7 +13,7 @@ function Filter({ setCategory }) {
     { label: "Electronics", value: "electronics" },
   ];
 
-  // ✅ Close on outside click
+ 
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
@@ -31,23 +31,23 @@ function Filter({ setCategory }) {
   return (
     <div ref={dropdownRef} className="relative w-full">
 
-      {/* Button */}
+     
       <button
         onClick={() => setOpen(!open)}
         className="w-full h-10 px-3 border rounded-lg bg-white text-left shadow-sm"
       >
-        {selected} {/* ✅ show selected category */}
+        {selected} 
       </button>
 
-      {/* Dropdown */}
+    
       {open && (
         <div className="absolute w-full mt-2 bg-white border rounded-lg shadow-lg z-10">
           {categories.map((cat, i) => (
             <div
               key={i}
               onClick={() => {
-                setCategory(cat.value);  // update parent
-                setSelected(cat.label);  // update button text
+                setCategory(cat.value); 
+                setSelected(cat.label);  
                 setOpen(false);
               }}
               className="px-4 py-2 hover:bg-blue-100 cursor-pointer rounded-lg"

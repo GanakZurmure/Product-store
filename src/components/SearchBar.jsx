@@ -2,7 +2,6 @@ function SearchBar({ setSearch }) {
   return (
     <div className="relative w-full">
       
-      {/* Icon */}
       <span className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -20,7 +19,7 @@ function SearchBar({ setSearch }) {
         </svg>
       </span>
 
-      {/* Input */}
+    
       <input
         type="text"
         placeholder="Search products..."
